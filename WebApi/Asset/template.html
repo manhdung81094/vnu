@@ -1,0 +1,326 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        #viewDeThi .container {
+            background: #fff;
+            margin: 0 auto;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding-top: 40px;
+        }
+
+        #viewDeThi .header {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #viewDeThi .header-left {
+            text-align: left;
+        }
+
+        #viewDeThi .header-center {
+            text-align: center;
+            flex: 1;
+        }
+
+        #viewDeThi .university {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #viewDeThi.nation {
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        #viewDeThi .slogan {
+            font-style: italic;
+            font-size: 15px;
+        }
+
+        #viewDeThi .exam-title {
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        #viewDeThi .exam-title h2 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        #viewDeThi .exam-title .subject {
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        #viewDeThi .info-table {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #viewDeThi .info-table .left {
+            border: 1px solid #000;
+            width: auto;
+            padding: 0;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        #viewDeThi .info-table .right {
+            flex: 1;
+            padding: 0;
+        }
+
+        #viewDeThi .info-table .right p {
+            margin: 2px 0;
+        }
+
+        /* #viewDeThi table, th,td {
+            border: 1px solid black !important;
+            text-align: center;
+            vertical-align: middle;
+            white-space: nowrap;
+        } */
+
+        #viewDeThi .table-bordered th,
+        .table-bordered td {
+            border-width: 1px;
+        }
+
+        #viewDeThi .no-border {
+            border: none !important;
+        }
+
+        @media print {
+            @page {
+                margin: 10px;
+                size: A4;
+                margin: 20mm 15mm 20mm 15mm;
+            }
+        }
+
+        #viewDeThi.section-table {
+            width: 100%;
+        }
+
+        #viewDeThi table {
+            border-collapse: collapse;
+            /* Viền gọn như Word */
+            width: 100%;
+            /* Full width như trang Word */
+            font-family: "Times New Roman", serif;
+            /* Font Word mặc định */
+            font-size: 13pt;
+            /* Kích thước giống Word */
+        }
+
+        #viewDeThi th,
+        td {
+            border: 1px solid black;
+            /* Viền đen */
+            padding: 5px 10px;
+            /* Khoảng cách bên trong */
+            text-align: left;
+            /* Word mặc định thường căn trái */
+        }
+
+        #viewDeThi th {
+            text-align: center;
+            /* Căn giữa tiêu đề */
+        }
+    </style>
+</head>
+
+<body>
+    <div style="
+        font-size: 13pt;
+        font-family: 'Times New Roman', Times, serif;
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        line-height: 18pt;
+      " id="viewDeThi">
+        <div class="container">
+            <div class="justify-content-around d-flex mb-3" style="
+            align-items: center;
+            justify-content: space-around;
+            display: flex;
+            margin-bottom: 3px;
+          ">
+                <div style="text-align: center; font-size: 13pt; justify-content: center">
+                    <h5 class="" style="margin: 0">TRƯỜNG ĐẠI HỌC QUỐC GIA HÀ NỘI</h5>
+                    <h5 class="fw-bold" style="font-weight: bold; margin: 0">
+                        TRƯỜNG KHOA HỌC LIÊN NGÀNH
+                        VÀ NGHỆ THUẬT
+                    </h5>
+                </div>
+                <div class="text-center mb-3" style="text-align: center; font-size: 13pt; justify-content: center">
+                    <h5 class="" style="font-weight: bold; margin: 0">
+                        CỘNG HÒA XÃ HỘI CHỦ NGHĨA VIỆT NAM
+                    </h5>
+                    <h5 class="fw-bold" style="font-weight: bold; margin: 0; display: inline-block">
+                        Độc lập - Tự do - Hạnh phúc
+                    </h5>
+                </div>
+            </div>
+
+            <div class="exam-title">
+                <h2>ĐỀ CƯƠNG CHI TIẾT HỌC PHẦN</h2>
+                <div class="subject">
+                    <p>Tên học phần: {ten_hoc_phan}</p>
+                </div>
+            </div>
+
+            <div class="content">
+                <h3>I.Thông tin chung</h3>
+                <p>1.Tên học phần(Tiếng Việt) : {ten_hoc_phan}</p>
+                <p>2.Tên học phần(Tiếng Anh) : {ten_hoc_phan_en}</p>
+                <p>3.Mã học phần : {ma_hoc_phan}</p>
+                <p>4.Số tín chỉ : {so_tin_chi}</p>
+                <p>
+                    5.Số giờ tín chỉ (lý thuyết/ thực hành/ tự học): {total_tc} ({total_lt}/{total_th}/{total_tuhoc})
+                </p>
+                <p>6.Loại học phần : {loai_hoc_phan}</p>
+                <p>7.Học phần tiên quyết : {hoc_phan_tien_quyet}</p>
+                <p>8.Học phần kế tiếp (nếu có): / {hoc_phan_ke_tiep}</p>
+                <p>9.Yêu cầu để giảng dạy học phần (nếu có): / {yeu_cau_giang_day}</p>
+                <p>10.Phương thức giảng viên tư vấn học tập cho sinh viên (nếu có): {phuong_thuc_giang_vien}</p>
+                <h3>1.2 Thông tin về giảng viên:</h3>
+                <div class="section-table">
+                    <p>{data_giang_vien}</p>
+                </div>
+                <h3>2. MÔ TẢ HỌC PHẦN</h3>
+                <p>{mo_ta_hoc_phan}</p>
+                <h3>3. MỤC TIÊU HỌC PHẦN</h3>
+                <div class="section-table">
+                    <table style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th>Mục tiêu</th>
+                                <th>Mô tả mục tiêu học phần</th>
+                                <th>Đóng góp vào CĐR nào của CTĐT (*)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {table_muc_tieu}
+                        </tbody>
+                    </table>
+                </div>
+                <h3>4. CHUẨN ĐẦU RA HỌC PHẦN</h3>
+                <div class="section-table">
+                    <table style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th>CĐR</th>
+                                <th>Mô tả chuẩn đầu ra học phần</th>
+                                <th>CĐR thực hiện mục tiêu nào của HP?</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {table_cdr}
+                        </tbody>
+                    </table>
+                </div>
+                <h3>5. NỘI DUNG HỌC PHẦN</h3>
+                <div class="section-table">
+                    <table style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th>Nội dung(Chương,Mục,Tiểu mục)</th>
+                                <th>Đạt CĐR</th>
+                                <th>Học liệu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {table_noi_dung}
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>6. PHƯƠNG PHÁP DẠY VÀ HỌC</h3>
+                <div class="section-table">
+                    <table style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th>TT</th>
+                                <th>Phương pháp được sử dụng</th>
+                                <th>Thực hiện CĐR của HP</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {table_phuong_phap}
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>7. HỌC LIỆU</h3>
+                <div class="section-table">
+                    <h3>7.1. Học liệu bắt buộc</h3>
+                    {data_tai_lieu_bat_buoc}
+                    <h3>7.2. Học liệu tham khảo</h3>
+                    {data_tai_lieu_tham_khao}
+                </div>
+
+                <h3>8. HOẠT ĐỘNG KIỂM TRA ĐÁNH GIÁ</h3>
+                <div class="section-table">
+                    <table style="width: 100%">
+                        <thead>
+                            <tr>
+                                <th>Tính chất</th>
+                                <th>Hoạt động kiểm tra đánh giá</th>
+                                <th>Trọng số</th>
+                                <th>Đo lường CĐR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {table_danh_gia}
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>9. HƯỚNG DẪN SINH VIÊN TỰ HỌC VÀ CÁC QUY TẮC CỦA LỚP HỌC</h3>
+                <p>{quy_tac}</p>
+               
+                <div>
+                    <div style="width: 100%; text-align: right; margin-top: 50px;">
+                        <div style="margin-bottom: 20px;">
+                            <strong>Hà Nội, ngày ...... tháng ...... năm ......</strong>
+                        </div>
+                        <table style="width: 100%; border: none;">
+                            <tr>
+                                <td style="border: none;text-align: center;"><strong>Trưởng Khoa</strong></td>
+                                <td style="border: none;text-align: center;"><strong>Trưởng Bộ Môn</strong></td>
+                                <td style="border: none;text-align: center;"><strong>Giảng viên</strong></td>
+                            </tr>
+                            <tr>
+                                <td style="border: none;text-align: center;">(Ký, ghi rõ họ tên)</td>
+                                <td style="border: none;text-align: center;">(Ký, ghi rõ họ tên)</td>
+                                <td style="border: none;text-align: center;">(Ký, ghi rõ họ tên)</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

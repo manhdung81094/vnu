@@ -1,0 +1,16 @@
+button [data-component=buttonContent] {
+  flex: auto !important;
+}/*# sourceMappingURL=App.css.map */
+
+.ql-font-arial {
+  font-family: Arial, sans-serif;
+}
+.ql-font-times-new-roman {
+  font-family: 'Times New Roman', serif;
+}
+.ql-font-comic-sans {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+.ql-font-courier-new {
+  font-family: 'Courier New', monospace;
+}

@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repository\" />
+    <None Remove="Service\" />
+    <None Remove="Service\Base\" />
+    <None Remove="Repository\Core\" />
+    <None Remove="Service\Core\" />
+    <None Remove="Repository\User\" />
+    <None Remove="Service\User\" />
+    <None Remove="Repository\Category\" />
+    <None Remove="Service\Category\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Service\Base\" />
+    <Folder Include="Repository\Core\" />
+    <Folder Include="Service\Core\" />
+    <Folder Include="Repository\User\" />
+    <Folder Include="Service\User\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="AWSSDK.S3" Version="3.7.405.4" />
+    <PackageReference Include="Dapper" Version="2.1.4" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Model\Model.csproj" />
+    <ProjectReference Include="..\Common\Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AspNetCore.Server.IIS">
+      <HintPath>C:\Program Files\dotnet\packs\Microsoft.AspNetCore.App.Ref\7.0.20\ref\net7.0\Microsoft.AspNetCore.Server.IIS.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+</Project>

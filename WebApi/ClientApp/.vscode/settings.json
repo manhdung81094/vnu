@@ -1,0 +1,6 @@
+{
+  "workbench.colorTheme": "Dracula Theme",
+  "workbench.preferredDarkColorTheme": "GitHub Light",
+  "svn.ignoreMissingSvnWarning": true,
+  "compile-hero.disable-compile-files-on-did-save-code": true
+}

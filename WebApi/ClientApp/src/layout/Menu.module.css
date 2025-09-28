@@ -1,0 +1,35 @@
+.menu nav {
+  border-bottom: 0px;
+}
+
+.navsub {
+  background-color: var(--bg-muted);
+}
+
+.navsub span {
+  color: #fff;
+}
+
+.navsub svg {
+  color: #fff;
+}
+
+.menu li > div {
+  height: 32px;
+}
+
+.menuName {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.nameGroup {
+  font-weight: bold;
+  margin: 0 15px;
+  margin-bottom: 7px;
+  display: block;
+}
+.menuIcon {
+  color: #fff;
+}

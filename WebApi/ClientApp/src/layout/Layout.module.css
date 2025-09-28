@@ -1,0 +1,33 @@
+.container{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/* .container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    height: 56px;
+    border-bottom: 1px solid var(--border-default);
+    display: flex;
+    align-items: center;
+}
+
+.body {
+    display: flex;
+    flex-direction: row;
+    min-height: calc(100vh - 56px);
+}
+
+.menu {
+    width: 250px;
+    border-right: 1px solid var(--border-default);
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.page {
+    flex: 1;
+} */
